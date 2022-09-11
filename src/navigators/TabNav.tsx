@@ -12,7 +12,7 @@ const TabNavigator = () => {
     <Tabs.Navigator
       screenOptions={{
         tabBarLabelStyle: {
-          fontFamily: "SUIT-Regular",
+          // fontFamily: "SUIT-Regular",
           fontSize: 12,
           marginTop: h2p(10),
           backgroundColor: "transparent"
@@ -22,8 +22,8 @@ const TabNavigator = () => {
           position: "absolute",
           height: h2p(77),
           paddingTop: h2p(20),
-          borderTopLeftRadius: 30,
-          borderTopRightRadius: 30,
+          // borderTopLeftRadius: 30,
+          // borderTopRightRadius: 30,
           shadowOffset: {
             width: 10,
             height: 8,
