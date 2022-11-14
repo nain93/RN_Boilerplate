@@ -21,9 +21,9 @@ const GlobalNav = () => {
         <Stack.Screen
           name="TabNav"
           component={TabNavigator}
-          options={{
-            headerShown: false
-          }}
+          // options={{
+          //   headerShown: false
+          // }}
         />
       </Stack.Navigator>
     </>

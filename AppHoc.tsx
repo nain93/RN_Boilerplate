@@ -5,7 +5,7 @@ import { MutationCache, QueryCache, QueryClient, QueryClientProvider } from 'rea
 import axios from 'axios';
 import App from './App';
 
-const AppHoc = ({ isHeadless }: any) => {
+const AppHoc = () => {
   // * react query 글로벌 에러 핸들링 세팅
   const queryClient = new QueryClient({
     queryCache: new QueryCache({
@@ -23,10 +23,6 @@ const AppHoc = ({ isHeadless }: any) => {
       }
     })
   });
-
-  if (isHeadless) {
-    return null;
-  }
 
   return (
     <QueryClientProvider client={queryClient}>
