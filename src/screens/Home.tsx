@@ -1,7 +1,7 @@
 import { StyleSheet, Text } from 'react-native';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { HomeProps } from '~/navigators/home/HomeStackNav';
+import { HomeProps } from '~/navigators/stackNav/HomeStackNav';
 
 const Home = ({}: HomeProps) => {
   return (

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { ProfileProps } from '~/navigators/profile/ProfileStackNav';
+import { ProfileProps } from '~/navigators/stackNav/ProfileStackNav';
 
 const Profile = ({}: ProfileProps) => {
   return (

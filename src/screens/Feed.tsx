@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { FeedProps } from '~/navigators/feed/FeedStackNav';
+import { FeedProps } from '~/navigators/stackNav/FeedStackNav';
 
 const Feed = ({}: FeedProps) => {
   return (

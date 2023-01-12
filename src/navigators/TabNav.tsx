@@ -2,10 +2,10 @@ import { Image, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 import { d2p, h2p } from '~/utils';
-import HomeStackNav from '~/navigators/home/HomeStackNav';
+import HomeStackNav from '~/navigators/stackNav/HomeStackNav';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import FeedStackNav from '~/navigators/feed/FeedStackNav';
-import ProfileStackNav from '~/navigators/profile/ProfileStackNav';
+import FeedStackNav from '~/navigators/stackNav/FeedStackNav';
+import ProfileStackNav from '~/navigators/stackNav/ProfileStackNav';
 
 type RootStackParamList = {
   HomeStackNav: undefined;
