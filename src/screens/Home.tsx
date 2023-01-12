@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
 import React from 'react';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { HomeProps } from '~/navigators/home/HomeStackNav';
 
-const Home = () => {
+const Home = ({}: HomeProps) => {
   return (
-    <View>
+    <TouchableOpacity>
       <Text>Home</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
