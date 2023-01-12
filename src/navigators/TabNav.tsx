@@ -1,7 +1,6 @@
-import { Image, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { d2p, h2p } from '~/utils';
 import HomeStackNav from '~/navigators/stackNav/HomeStackNav';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import FeedStackNav from '~/navigators/stackNav/FeedStackNav';
@@ -27,14 +26,14 @@ const TabNavigator = () => {
         tabBarLabelStyle: {
           // fontFamily: "SUIT-Regular",
           fontSize: 12,
-          marginTop: h2p(10),
+          marginTop: 10,
           backgroundColor: 'transparent',
         },
         // tabBarHideOnKeyboard: true,
         tabBarStyle: {
           position: 'absolute',
-          height: h2p(77),
-          paddingTop: h2p(20),
+          height: 77,
+          paddingTop: 20,
           // borderTopLeftRadius: 30,
           // borderTopRightRadius: 30,
           shadowOffset: {
@@ -52,12 +51,12 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: '홈',
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <Image
-              style={{ width: d2p(25), height: d2p(16) }}
-              // source={focused ? mainlogoIcon : graylogo}
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   <Image
+          //     style={{ width: 25, height: 16 }}
+          //     source={null}
+          //   />
+          // ),
         }}
       />
       <Tabs.Screen
@@ -66,12 +65,12 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: '피드',
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <Image
-              style={{ width: d2p(25), height: d2p(16) }}
-              // source={focused ? mainlogoIcon : graylogo}
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   <Image
+          //     style={{ width: 25, height: 16 }}
+          //     source={focused ? mainlogoIcon : graylogo}
+          //   />
+          // ),
         }}
       />
       <Tabs.Screen
@@ -80,12 +79,12 @@ const TabNavigator = () => {
         options={{
           tabBarLabel: '프로필',
           headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <Image
-              style={{ width: d2p(25), height: d2p(16) }}
-              // source={focused ? mainlogoIcon : graylogo}
-            />
-          ),
+          // tabBarIcon: ({ focused }) => (
+          //   <Image
+          //     style={{ width: 25, height: 16 }}
+          //     source={focused ? mainlogoIcon : graylogo}
+          //   />
+          // ),
         }}
       />
     </Tabs.Navigator>
