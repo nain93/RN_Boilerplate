@@ -1,20 +1,27 @@
-import { Platform, StyleSheet } from 'react-native';
 import {
-  createStackNavigator,
   CardStyleInterpolators,
+  StackNavigationProp,
+  createStackNavigator,
 } from '@react-navigation/stack';
-import React from 'react';
-import Home from '~/screens/Home';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Platform, StyleSheet } from 'react-native';
 
-type RootStackParamList = {
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { CompositeNavigationProp } from '@react-navigation/native';
+import { GlobalStackParamList } from '~/navigators/GlobalNav';
+import Home from '~/screens/Home';
+import React from 'react';
+import { TabParamList } from '~/navigators/TabNav';
+
+export type HomeStackParamList = {
   Home: undefined;
-  // Detail: { userId: string };
 };
 
-export type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+export type HomeStackNavProps = CompositeNavigationProp<
+  BottomTabNavigationProp<TabParamList, 'HomeStackNav'>,
+  StackNavigationProp<GlobalStackParamList>
+>;
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<HomeStackParamList>();
 
 const HomeStackNav = () => {
   return (

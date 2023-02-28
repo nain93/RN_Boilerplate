@@ -1,10 +1,24 @@
+import FeedStackNav, {
+  FeedStackParamList,
+} from '~/navigators/stackNav/FeedStackNav';
+import HomeStackNav, {
+  HomeStackParamList,
+} from '~/navigators/stackNav/HomeStackNav';
+import ProfileStackNav, {
+  ProfileStackParamList,
+} from '~/navigators/stackNav/ProfileStackNav';
+
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React from 'react';
-import HomeStackNav from '~/navigators/stackNav/HomeStackNav';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import FeedStackNav from '~/navigators/stackNav/FeedStackNav';
-import ProfileStackNav from '~/navigators/stackNav/ProfileStackNav';
+
+export type TabParamList = {
+  HomeStackNav: NavigatorScreenParams<HomeStackParamList>;
+  FeedStackNav: NavigatorScreenParams<FeedStackParamList>;
+  ProfileStackNav: NavigatorScreenParams<ProfileStackParamList>;
+};
 
 type RootStackParamList = {
   HomeStackNav: undefined;

@@ -1,24 +1,24 @@
-import { Platform, StyleSheet } from 'react-native';
 import {
-  createStackNavigator,
   CardStyleInterpolators,
+  createStackNavigator,
 } from '@react-navigation/stack';
-import React from 'react';
+import { Platform, StyleSheet } from 'react-native';
+
 import Home from '~/screens/Home';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import Profile from '~/screens/Profile';
+import React from 'react';
 
-type RootStackParamList = {
+export type ProfileStackParamList = {
   Profile: undefined;
-  // Detail: { userId: string };
 };
 
 export type ProfileProps = NativeStackScreenProps<
-  RootStackParamList,
+  ProfileStackParamList,
   'Profile'
 >;
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<ProfileStackParamList>();
 
 const ProfileStackNav = () => {
   return (

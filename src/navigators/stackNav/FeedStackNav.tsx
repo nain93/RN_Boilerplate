@@ -1,21 +1,21 @@
-import { Platform, StyleSheet } from 'react-native';
 import {
-  createStackNavigator,
   CardStyleInterpolators,
+  createStackNavigator,
 } from '@react-navigation/stack';
-import React from 'react';
+import { Platform, StyleSheet } from 'react-native';
+
+import Feed from '~/screens/Feed';
 import Home from '~/screens/Home';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import Feed from '~/screens/Feed';
+import React from 'react';
 
-type RootStackParamList = {
+export type FeedStackParamList = {
   Feed: undefined;
-  // Detail: { userId: string };
 };
 
-export type FeedProps = NativeStackScreenProps<RootStackParamList, 'Feed'>;
+export type FeedProps = NativeStackScreenProps<FeedStackParamList, 'Feed'>;
 
-const Stack = createStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<FeedStackParamList>();
 
 const FeedStackNav = () => {
   return (
