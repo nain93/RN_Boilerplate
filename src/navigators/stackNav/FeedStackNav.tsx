@@ -5,7 +5,6 @@ import {
 import { Platform, StyleSheet } from 'react-native';
 
 import Feed from '~/screens/Feed';
-import Home from '~/screens/Home';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 

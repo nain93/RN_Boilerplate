@@ -4,7 +4,6 @@ import {
 } from '@react-navigation/stack';
 import { Platform, StyleSheet } from 'react-native';
 
-import Home from '~/screens/Home';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import Profile from '~/screens/Profile';
 import React from 'react';
