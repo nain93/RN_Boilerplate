@@ -1,20 +1,22 @@
 import {
   CardStyleInterpolators,
+  StackNavigationProp,
   createStackNavigator,
 } from '@react-navigation/stack';
+import TabNavigator, { TabParamList } from '~/navigators/TabNav';
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { CompositeNavigationProp } from '@react-navigation/native';
 import { Platform } from 'react-native';
 import React from 'react';
-import TabNavigator from '~/navigators/TabNav';
 
 export type GlobalStackParamList = {
   TabNav: undefined;
 };
 
-export type TabNavProps = NativeStackScreenProps<
-  GlobalStackParamList,
-  'TabNav'
+export type GlobalNavProps = CompositeNavigationProp<
+  BottomTabNavigationProp<TabParamList, 'HomeStackNav'>,
+  StackNavigationProp<GlobalStackParamList>
 >;
 
 const Stack = createStackNavigator<GlobalStackParamList>();

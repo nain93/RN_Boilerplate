@@ -20,18 +20,12 @@ export type TabParamList = {
   ProfileStackNav: NavigatorScreenParams<ProfileStackParamList>;
 };
 
-type RootStackParamList = {
-  HomeStackNav: undefined;
-  FeedStackNav: { sort: 'latest' | 'top' } | undefined;
-  ProfileStackNav: { userId: string };
-};
-
 export type HomeStackNavProps = NativeStackScreenProps<
-  RootStackParamList,
+  TabParamList,
   'HomeStackNav'
 >;
 
-const Tabs = createBottomTabNavigator<RootStackParamList>();
+const Tabs = createBottomTabNavigator<TabParamList>();
 
 const TabNavigator = () => {
   return (

@@ -9,6 +9,7 @@ import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { CompositeNavigationProp } from '@react-navigation/native';
 import { GlobalStackParamList } from '~/navigators/GlobalNav';
 import Home from '~/screens/Home';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { TabParamList } from '~/navigators/TabNav';
 
@@ -16,9 +17,9 @@ export type HomeStackParamList = {
   Home: undefined;
 };
 
-export type HomeStackNavProps = CompositeNavigationProp<
-  BottomTabNavigationProp<TabParamList, 'HomeStackNav'>,
-  StackNavigationProp<GlobalStackParamList>
+export type HomeStackNavProps = NativeStackScreenProps<
+  HomeStackParamList,
+  'Home'
 >;
 
 const Stack = createStackNavigator<HomeStackParamList>();
