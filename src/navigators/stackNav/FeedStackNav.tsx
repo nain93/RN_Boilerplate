@@ -1,18 +1,18 @@
 import {
   CardStyleInterpolators,
+  StackScreenProps,
   createStackNavigator,
 } from '@react-navigation/stack';
-import { Platform, StyleSheet } from 'react-native';
 
 import Feed from '~/screens/Feed';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Platform } from 'react-native';
 import React from 'react';
 
 export type FeedStackParamList = {
   Feed: undefined;
 };
 
-export type FeedProps = NativeStackScreenProps<FeedStackParamList, 'Feed'>;
+export type FeedStackNavProps = StackScreenProps<FeedStackParamList>;
 
 const Stack = createStackNavigator<FeedStackParamList>();
 
@@ -37,5 +37,3 @@ const FeedStackNav = () => {
 };
 
 export default FeedStackNav;
-
-const styles = StyleSheet.create({});

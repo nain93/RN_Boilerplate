@@ -1,3 +1,7 @@
+import {
+  BottomTabNavigationProp,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs';
 import FeedStackNav, {
   FeedStackParamList,
 } from '~/navigators/stackNav/FeedStackNav';
@@ -8,11 +12,8 @@ import ProfileStackNav, {
   ProfileStackParamList,
 } from '~/navigators/stackNav/ProfileStackNav';
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { NavigatorScreenParams } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type TabParamList = {
   HomeStackNav: NavigatorScreenParams<HomeStackParamList>;
@@ -20,10 +21,7 @@ export type TabParamList = {
   ProfileStackNav: NavigatorScreenParams<ProfileStackParamList>;
 };
 
-export type HomeStackNavProps = NativeStackScreenProps<
-  TabParamList,
-  'HomeStackNav'
->;
+export type TabNavProps = BottomTabNavigationProp<TabParamList>;
 
 const Tabs = createBottomTabNavigator<TabParamList>();
 
@@ -100,5 +98,3 @@ const TabNavigator = () => {
 };
 
 export default TabNavigator;
-
-const styles = StyleSheet.create({});

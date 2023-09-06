@@ -1,11 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { HomeStackNavProps } from '~/navigators/TabNav';
+import { HomeStackNavProps } from '~/navigators/stackNav/HomeStackNav';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
 
-const Home = () => {
-  const navigation = useNavigation<HomeStackNavProps>();
+const Home = ({}: HomeStackNavProps) => {
   return (
     <View>
       <Text>Home</Text>
@@ -14,5 +12,3 @@ const Home = () => {
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});

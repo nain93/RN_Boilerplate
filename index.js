@@ -2,8 +2,8 @@
  * @format
  */
 
+import AppProvider from './AppProvider';
 import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
-import AppHoc from './AppHoc';
 
-AppRegistry.registerComponent(appName, () => AppHoc);
+AppRegistry.registerComponent(appName, () => AppProvider);

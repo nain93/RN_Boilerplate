@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
-import { ProfileProps } from '~/navigators/stackNav/ProfileStackNav';
+import { Text, View } from 'react-native';
 
-const Profile = ({}: ProfileProps) => {
+import { ProfileStackNavProps } from '~/navigators/stackNav/ProfileStackNav';
+import React from 'react';
+
+const Profile = ({}: ProfileStackNavProps) => {
   return (
     <View>
       <Text>Profile</Text>
@@ -11,5 +12,3 @@ const Profile = ({}: ProfileProps) => {
 };
 
 export default Profile;
-
-const styles = StyleSheet.create({});

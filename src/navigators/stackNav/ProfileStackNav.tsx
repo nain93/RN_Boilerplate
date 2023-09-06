@@ -1,10 +1,10 @@
 import {
   CardStyleInterpolators,
+  StackScreenProps,
   createStackNavigator,
 } from '@react-navigation/stack';
-import { Platform, StyleSheet } from 'react-native';
 
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Platform } from 'react-native';
 import Profile from '~/screens/Profile';
 import React from 'react';
 
@@ -12,10 +12,7 @@ export type ProfileStackParamList = {
   Profile: undefined;
 };
 
-export type ProfileProps = NativeStackScreenProps<
-  ProfileStackParamList,
-  'Profile'
->;
+export type ProfileStackNavProps = StackScreenProps<ProfileStackParamList>;
 
 const Stack = createStackNavigator<ProfileStackParamList>();
 
@@ -40,5 +37,3 @@ const ProfileStackNav = () => {
 };
 
 export default ProfileStackNav;
-
-const styles = StyleSheet.create({});
